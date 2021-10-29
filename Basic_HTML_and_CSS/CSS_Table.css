@@ -1,0 +1,22 @@
+table {
+	border: 1px solid silver;
+}
+td:hover {
+	background-color: black;
+	color: white;
+}
+tr, th {
+	background-color: darkred;
+	color: cornsilk;
+	/* text-shadow: negro 0.1em 0.1em 0.2em; /* sombra de texto para blanco legible */
+}
+tr, td {
+	text-align: center;
+	background-color: darkgreen;
+	color: yellow;
+	/* text-shadow: 0 0 0.2em # 87F, 0 0 0.2em # 87F,
+		0 0 0.2em # 87F; /* sombra de texto con brillo neon */
+}
+h1 {text-shadow: 0.2em 0.5em 0.1em # 600,
+	  -0.3em 0.1em 0.1em # 060,
+	  0.4em -0.3em 0.1em # 006 } /* sombra de texto de varias sombras */
