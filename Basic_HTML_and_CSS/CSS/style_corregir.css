@@ -1,0 +1,16 @@
+body {
+	font-size: 14px;
+	margin: 0;
+	font-family: "Helvetica Neve", Helvetica, Arial, sans-serif;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: lightblue;
+}
+
+		<style type="text/css"> .punteado {
+			border-style: dotted;
+			border-width: 2px;
+			border-color: red;
+			background-color: #cc3366;
+		}
+		</style>

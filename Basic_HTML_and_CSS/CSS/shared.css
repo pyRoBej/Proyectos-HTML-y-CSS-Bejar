@@ -249,8 +249,21 @@ section {
 	font-family: 'Releway', sans-serif;
 }
 
-.reservation input {
-
+.reservation input[type="text"] {
+	font-size:15px;
+	outline: none;
+	font-weight: 600;
+	color: #8D8E8F;
+	padding: 2% 1% 2% 7%;
+	width: 80%;
+	border-top: 1px solid #090B0D;
+	border-right: 2px solid #424549;
+	border-bottom: 2px solid #090B0D;
+	margin: 10px 1em;
+	border-radius: 7px;
+	background: #13161B;
+	box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+	font-family: 'Releway', sans-serif;
 }
 
 .reservation input[type="text"]:hover {
@@ -262,7 +275,14 @@ section {
 }
 
 .terms {
-
+	margin: 30px 1px 0 0 ;
+	padding-left: 52px;
+	font-size: 14px;
+	line-height: 5px;
+	color: #000;
+	cursor: pointer;
+	font-family: 'Releway', sans-serif;
+	font-weight: 600;
 }
 
 .terms:hover {
@@ -270,8 +290,22 @@ section {
 	text-decoration: underline;
 }
 
-.submit input {
-
+.submit input[type="submit"] {
+	color: rgb(225, 225, 225);
+	cursor: pointer;
+	border: none;
+	font-weight: 900;
+	outline: none;
+	text-align: center;
+	font-family: 'Releway', sans-serif;
+	margin: 0px 3%;
+	padding: 7px 0px;
+	width: 25%;
+	font-size: 18px;
+	transition: border-color 0.3s color 0.3s background-color 0.3s;
+	border-radius: 7px;
+	background-color: #797a7b;
+	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .submit input[type="submit"]:hover {
@@ -286,6 +320,43 @@ section {
 =========================================================*/
 
 #footer {
-
+	background-color: rgba(100, 65, 0, 0.3);
+	color: #000;
+	text-shadow: 2px 2px 8px 0 (0,0,0,0.4);
+	padding: 20px 50px 20px 50px;
+	text-align: right;
 }
 
+/*========================================================
+	@media queries
+=========================================================*/
+
+@media all and (max-width: 640px) and (min-width: 381px) {
+	.head-main {
+		font-size: 28px;
+	}
+}
+
+@media all and (max-width: 381px) and (min-width: 200px) {
+	.head-main {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
