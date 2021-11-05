@@ -1,0 +1,123 @@
+/* CSS style */
+p {
+	font-weight: 300px;
+	line-height: 30px;
+	padding-bottom: 15px;
+	text-align: justify;
+}
+
+h3 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-left: auto;
+	width: 50%;
+}
+
+
+.photo {
+	filter: opacity(75%);
+	border: 2px solid #021a40;
+	border-radius: 8px;
+	position: relative;
+	line-height: 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+	padding: 1px;
+	background-color: #ff0;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.photo-container {
+	text-align: center;
+	margin: 15px auto;
+	width: 600px;
+	height: 300px;
+}
+
+.photo-container img {
+	max-width: 100%;
+	width: 600px;
+	height: 300px;
+}
+
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	justify-content: center; /* for centering text content */
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.white-head {
+	color: #C9BDAA;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	padding-bottom: 20px;
+}
+
+.photo-overlay {
+	opacity: 0;
+	transition: opacity .1s;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.photo-overlay p {
+	width: 100%;
+	height: 100;
+	color: #fff;
+}
+
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+.photo img {
+	transition: transform .5s;
+	transform-origin: 50% 50%;
+}
+
+.photo img:hover {
+	transform: scale(1.1);
+}
+
+table, th, td {
+	border: 1px solid black;
+
+  }
+
+th {
+	text-align: center;
+}
+
+td {
+	text-align: justify;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: lightseagreen;
+}
+
+footer {
+	text-align: center;
+	padding: 3px;
+	background-color: lightgray;
+	color: darkred;
+  }
