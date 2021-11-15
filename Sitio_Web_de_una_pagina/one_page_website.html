@@ -2,31 +2,214 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Manuel Bejarano">
 		<title>Harry Potter Sitio Web by pyRoBej.</title>
+        <script src="./JS/one_page_website.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
+		<style>
+			body {
+			  font-family: Verdana, sans-serif;
+			  margin: 0;
+			}
+			
+			* {
+			  box-sizing: border-box;
+			}
+		</style>
 </head>
 <body>
 	<!-- contenedores -->
-
 		<div>
 			<div>
 				<nav>
 				<ul>
-					<li><a href="#home">INICIO</a></li>
-					<li><a href="#galeria">GALERIA</a></li> 
+					<li><a href="#galeria">GALERIA</a></li>
+					<li><a href="#curiosidades">CURIOSIDADES</a></li>
 					<li><a href="#contact">SUSCRIPCION</a></li>
 				</ul>
 				</nav>
 			</div>
 		</div>
-
-		<!-- HOME -->
+		
 		<div>
-			<h2 id="home">Inicio</h2>
-			<div>
-				<div>
-					<h1><span>HARRY POTTER WIZARDING WORLD</span></h1>
+			<h1><span>HARRY POTTER WIZARDING WORLD</span></h1>
+		</div>
+
+		<!-- Gallery -->
+		<section>
+				<h2 id="galeria">Galeria de curiosidades</h2>
+					<!-- Photo Container 1 -->
+					<div class="row">
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							<div>
+								<h3>La cicatriz de Harry no tiene forma de rayo.</h3>
+							</div>
+						</div>
+					<!-- Photo Container 1 -->
+
+					<!-- Photo Container 2 -->
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+							<div>
+								<h3>Crookshanks pertenecía a la familia de los Potter.</h3>
+							</div>
+						</div>
+					<!-- Photo Container 2 -->
+
+					<!-- Photo Container 3 -->
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+							<div>
+								<h3>Cuidado con la profesora Trelawney.</h3>
+							</div>
+						</div>
+					<!-- Photo Container 3 -->
+
+					<!-- Photo Container 4 -->
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+							<div>
+								<h3>¿Por qué Dumbledore no dejaba que Snape fuese profesor de "Defensa contra las artes oscuras"?</h3>
+							</div>
+						</div>
+					<!-- Photo Container 4 -->
+
+					<!-- Photo Container 5 -->
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+							<div>
+								<h3>¿Era Harry mejor que otros magos?</h3>
+							</div>
+						</div>
+					<!-- Photo Container 5 -->
+
+					<!-- Photo Container 6 -->
+						<div class="column">
+							<img src="./Imagenes/Miniaturas/HP6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+							<div>
+								<h3>George Weasley y Willy Wonka podrían ser la misma persona.</h3>
+							</div>
+						</div>
+					<!-- Photo Container 6 -->
+					
+					<!-- Photo Container 7 -->
+					<div class="column">
+						<img src="./Imagenes/Miniaturas/H7.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+						
+					</div>
+					<!-- Photo Container 7 -->
+
+					<!-- Photo Container 8 -->
+					<div class="column">
+						<img src="./Imagenes/Miniaturas/H8.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+						
+					</div>
+					<!-- Photo Container 8 -->
 				</div>
+		<!-- end Gallery -->
+
+		<!-- The Modal/lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+		  
+			  <div class="mySlides">
+				<div class="numbertext">1 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP1.png" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">2 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP2.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">3 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP3.jpg" style="width:100%">
+			  </div>
+			  
+			  <div class="mySlides">
+				<div class="numbertext">4 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP4.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+				<div class="numbertext">5 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP5.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+				<div class="numbertext">6 / 8</div>
+				<img src="./Imagenes/Miniaturas/HP6.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+				<div class="numbertext">7 / 8</div>
+				<img src="./Imagenes/Miniaturas/H7.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+				<div class="numbertext">8 / 8</div>
+				<img src="./Imagenes/Miniaturas/H8.png" style="width:100%">
+			  </div>
+			  
+			  <!-- Next/previous controls -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			  
+			  <!-- Caption text -->
+			  <div class="caption-container">
+				<p id="caption"></p>
+			  </div>
+
+			  <!-- Thumbnail image controls -->
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP1.jpg" style="width:100%" onclick="currentSlide(1)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP2.jpg" style="width:100%" onclick="currentSlide(2)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP3.jpg" style="width:100%" onclick="currentSlide(3)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP4.jpg" style="width:100%" onclick="currentSlide(4)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP5.jpg" style="width:100%" onclick="currentSlide(5)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/HP6.jpg" style="width:100%" onclick="currentSlide(6)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/H7.png" style="width:100%" onclick="currentSlide(7)">
+			  </div>
+			  <div class="column">
+				<img class="demo cursor" src="./Imagenes/Miniaturas/H8.png" style="width:100%" onclick="currentSlide(8)">
+			  </div>
+			</div>
+		  </div>
+		<!-- End the Modal/lightbox -->
+	</section>
+
+		<!-- Video  -->
+		<section>
+			<br>
+			<h2 id="Vid">Seccion de videos.</h2>
+			<h3>Video de Escenas eliminadas de la saga.</h3>
+				<br>
+				<iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ipx4bXbKnyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!--- <a href="https://www.youtube.com/watch?v=RYJPdC2ERjY" target="new"> Escenas eliminadas de todas las peliculas de Harry Potter (En español/subtitulado) </a> --->
+		</section>
+		<!-- End video  -->
+
+		<!-- curiosidades -->
+	<section>
+		<div>
+			<h1 id="curiosidades">CURIOSIDADES</h1>
+			<div>
 				<section>
 					<h2>6 curiosidades que, probablemente, no conocíais de esta mágica saga.</h2>
 					<p><span style="font-style: italic; font-weight: normal">La cicatriz de Harry no tiene forma de rayo.</span><br>J.K. Rowling es una especialista en coger sus historias y, cuando convenga, cambiarlas a conveniencia para que se adapten a sus nuevos y pecaminosos deseos. Esto, con Harry Potter, es el pan de cada día. Resulta que, lo que pensábamos que era un rayo… ya no es un rayo, sino otra cosa muy diferente. 
@@ -53,90 +236,9 @@
 				</section>
 			</div>
 		</div>
-		<!-- end Home -->
+	</section>
+		<!-- end Curiosidades -->
 
-		<!-- Gallery -->
-		<section>
-			<div>
-				<h1 id="galeria">Galeria de curiosidades</h1>
-				<div>
-					<!-- Photo Container 1 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP1.png" alt="Imagen del universo de Harry Potter." style="width:560px;height: 315px;">
-							<div>
-								<h3>La cicatriz de Harry no tiene forma de rayo.</h3>
-							</div>
-						</div>
-					</div>
-					<!-- Photo Container 1 -->
-
-					<!-- Photo Container 2 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP2.png" alt="Imagen del universo de Harry Potter" style="width:560px;height: 315px;">
-							<div>
-								<h3>Crookshanks pertenecía a la familia de los Potter.</h3>
-							</div>
-						</div>
-					</div>
-					<!-- Photo Container 2 -->
-
-					<!-- Photo Container 3 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP3.png" alt="Imagen del universo de Harry Potter." style="width:560px;height: 315px;">
-							<div>
-								<h3>Cuidado con la profesora Trelawney.</h3>
-							</div>
-						</div>
-					</div>
-					<!-- Photo Container 3 -->
-
-					<!-- Photo Container 4 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP4.png" alt="Imagen del universo de Harry Potter." style="width:560px;height: 315px;">
-							<div>
-								<h3>¿Por qué Dumbledore no dejaba que Snape fuese profesor de "Defensa contra las artes oscuras"?</h3>
-							</div>
-						</div>
-					</div>
-					<!-- Photo Container 4 -->
-
-					<!-- Photo Container 5 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP5.png" alt="Imagen del universo de Harry Potter." style="width:560px;height: 315px;">
-							<div>
-								<h3>¿Era Harry mejor que otros magos?</h3>
-							</div>
-						</div>
-					</div>
-					<!-- Photo Container 5 -->
-
-					<!-- Photo Container 6 -->
-					<div>
-						<div>
-							<img src="./Imagenes/Miniaturas/HP6.png" alt="Imagen del universo de Harry Potter." style="width:560px;height: 315px;">
-							<div>
-								<h3>George Weasley y Willy Wonka podrían ser la misma persona.</h3>
-						</div>
-					</div>
-					<!-- Photo Container 6 -->
-
-				</div>
-			</div>
-		</section>
-		<!-- end Gallery -->
-		<section>
-			<br>
-			<h3 id="Vid">Seccion de videos.</h3>
-			<h2>Video de Escenas eliminadas de la saga.</h2>
-				<br>
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ipx4bXbKnyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<!--- <a href="https://www.youtube.com/watch?v=RYJPdC2ERjY" target="new"> Escenas eliminadas de todas las peliculas de Harry Potter (En español/subtitulado) </a> --->
-		</section>
 		<!-- RSVP -->
 		<section id="contact">
 			<div>
